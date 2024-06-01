@@ -2,7 +2,7 @@ Add Codespace support so that users can quickly obtain an environment pre-instal
 
 You can try this feature right away:
 
-1.Visit this page: https://github.com/chmod777john/letsmove
+1.Visit this page: https://github.com/chmod777john/sui-dapp/
 
 2.Press the comma key (,)
 
