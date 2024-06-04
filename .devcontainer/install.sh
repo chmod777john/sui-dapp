@@ -33,5 +33,5 @@ curl --location --request POST 'https://faucet.devnet.sui.io/gas' \
 cd move
 sui client publish --gas-budget 100000000 counter
 
-cd /workspaces/sui-dapp/my-first-sui-dapp && pnpm install && pnpm dev
+cd /workspaces/sui-dapp/my-first-sui-dapp && pnpm install
 
