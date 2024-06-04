@@ -14,3 +14,24 @@ wget -O rust-setup.sh https://sh.rustup.rs
 chmod +x rust-setup.sh
 sh ./rust-setup.sh -y
 rm ./rust-setup.sh
+
+sui client new-env --alias devnet --rpc https://fullnode.devnet.sui.io:443
+sui client switch --env devnet
+
+sui client new-address secp256k1
+
+sui client switch --address 0xYOUR_ADDRESS...
+
+curl --location --request POST 'https://faucet.devnet.sui.io/gas' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "FixedAmountRequest": {
+        "recipient": "0x25adf9f3104806c6c57e2b8c2d67005908392857c8733879e250d6f49c6b971a"
+    }
+}'
+
+cd move
+sui client publish --gas-budget 100000000 counter
+
+cd /workspaces/sui-dapp/my-first-sui-dapp && pnpm install
+
